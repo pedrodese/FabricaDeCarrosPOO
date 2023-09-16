@@ -1,3 +1,8 @@
+package MODEL;
+
+import MODEL.Carro;
+import VIEW.EntradaSaida;
+
 import java.util.ArrayList;
 
 public class Fabrica {

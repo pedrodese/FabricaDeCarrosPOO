@@ -1,4 +1,8 @@
+package VIEW;
+
 import javax.swing.*;
+import MODEL.*;
+
 import java.util.ArrayList;
 
 public class EntradaSaida
@@ -37,7 +41,16 @@ public class EntradaSaida
         for(int x=0;x<carrosFabricados.size();x++){
             informacoes[x] = "Modelo: " + carrosFabricados.get(x).getModelo() + "\n Cor: " + carrosFabricados.get(x).getCor();
         }
-        JOptionPane.showMessageDialog(null,informacoes);
+
+        boolean validacaoInfoCarros = false;
+        if(carrosFabricados.isEmpty()){
+            JOptionPane.showMessageDialog(null,"Não existem carros disponiveis para visualização, fabrique mais carros!","Estoque zerado!",JOptionPane.WARNING_MESSAGE);
+            validacaoInfoCarros = true;
+        }
+
+        if(validacaoInfoCarros == false){
+            JOptionPane.showMessageDialog(null,informacoes);
+        }
     }
 
     public static void exibeMsgEncerraPrograma(){

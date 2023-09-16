@@ -1,3 +1,5 @@
+package MODEL;
+
 import java.util.ArrayList;
 
 public class Carro {
